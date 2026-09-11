@@ -3,6 +3,7 @@ import Bannar from "./Componants/Bannar";
 import Nevber from "./Componants/Nevber";
 import { Itecnology } from "./Componants/Types/TecnologyTypes";
 import Technologies from "./Componants/Technologies";
+import Footer from "./Componants/Footer";
 
 const tecnologyFetch = async (): Promise<Itecnology[]> => {
   const res = await fetch("/public/tech_stack_data.json");
@@ -23,6 +24,7 @@ function App() {
       >
         <Technologies tecnologyPromise={tecnologyPromise}></Technologies>
       </Suspense>
+      <Footer></Footer>
     </>
   );
 }
