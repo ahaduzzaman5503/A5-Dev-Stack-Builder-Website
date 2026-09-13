@@ -12,6 +12,18 @@ export default function Technologies({ tecnologyPromise }: tecnologyProps) {
 
   const [yourStack, setYourStack] = useState<Itecnology[]>([]);
 
+  const badgeStyles: Record<string, string> = {
+    Popular: "bg-blue-50 text-blue-500 border border-blue-100",
+    Versatile: "bg-green-50 text-green-500 border border-green-100",
+    Fast: "bg-orange-50 text-orange-500 border border-orange-100",
+    "Full Stack": "bg-purple-50 text-purple-500 border border-purple-100",
+    Standard: "bg-green-50 text-green-500 border border-green-100",
+    "Top SQL": "bg-blue-50 text-blue-500 border border-blue-100",
+    Cache: "bg-red-50 text-red-500 border border-red-100",
+    Ubiquitous: "bg-yellow-50 text-yellow-600 border border-yellow-100",
+    Essential: "bg-blue-50 text-blue-500 border border-blue-100",
+  };
+
   return (
     <>
       <div className="container mx-auto">
@@ -45,7 +57,12 @@ export default function Technologies({ tecnologyPromise }: tecnologyProps) {
                         alt={technology.name}
                       />
 
-                      <button className="btn bg-gray-200 border-none text-black rounded-2xl">
+                      <button
+                        className={`rounded-2xl px-3 py-1 text-xs ${
+                          badgeStyles[technology.badge] ||
+                          "bg-gray-100 text-gray-600"
+                        }`}
+                      >
                         {technology.badge}
                       </button>
                     </div>

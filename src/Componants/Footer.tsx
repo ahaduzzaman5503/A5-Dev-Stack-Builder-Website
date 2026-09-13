@@ -46,7 +46,10 @@ export default function Footer() {
         <div className="container mx-auto">
           <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
             <aside className="grid-flow-col items-center">
-              <p>Copyright © {new Date().getFullYear()} -  Dev Stack. All rights reserved.</p>
+              <p>
+                Copyright © {new Date().getFullYear()} - Dev Stack. All rights
+                reserved.
+              </p>
             </aside>
             <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
               <a className="link link-hover">Privacy policy</a>

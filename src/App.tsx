@@ -24,9 +24,7 @@ function App() {
           <span className="loading loading-spinner text-secondary"></span>
         }
       >
-        <Technologies
-          tecnologyPromise={tecnologyPromise}
-        ></Technologies>
+        <Technologies tecnologyPromise={tecnologyPromise}></Technologies>
       </Suspense>
 
       <Footer></Footer>
